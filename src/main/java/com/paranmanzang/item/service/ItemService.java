@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface ItemService {
-    List<ItemModel> findAll();
+    List<ItemEntity> findAll();
     ItemEntity save(ItemModel item);
-    Optional<ItemModel> findById(Long id);
+    Optional<ItemEntity> findById(Long id);
     boolean existsById(Long id);
     long count();
     void deleteById(Long id);
