@@ -2,6 +2,7 @@ package com.paranmanzang.item.controller;
 
 import com.paranmanzang.item.model.domain.HotelModel;
 import com.paranmanzang.item.model.entity.HotelEntity;
+import com.paranmanzang.item.model.repository.HotelRepository;
 import com.paranmanzang.item.service.HotelService;
 import com.paranmanzang.item.service.impl.HotelServiceImpl;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ import java.util.Optional;
 public class HotelController{
 
     private final HotelServiceImpl hotelService;
-
+    private final HotelRepository hotelRepository;
     @GetMapping("list")
     public List<HotelEntity> findAll() {
         return List.of();
