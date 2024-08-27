@@ -5,13 +5,11 @@ import org.springframework.stereotype.Component;
 
 @Data
 @Component
-public class ItemModel {
+public class HotelModel {
     private Long id;
-    private String title;
+    private Long memberId;
+    private String name;
+    private String tel;
+    private float rating;
     private String content;
-    private String writer;
-    private String publisher;
-    private Long price;
-
 }
-
