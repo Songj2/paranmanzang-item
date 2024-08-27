@@ -7,7 +7,9 @@ import com.paranmanzang.item.service.MemberService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -43,5 +45,12 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public void deleteById(Long id) {
 memberRepository.existsById(id);
+    }
+
+    @Override
+    public Map<?, ?> login(MemberModel model) {
+        Map<?,?> map=new HashMap<>();
+//                memberRepository.login(model);
+        return map;
     }
 }

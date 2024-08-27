@@ -4,6 +4,7 @@ import com.paranmanzang.item.model.domain.MemberModel;
 import com.paranmanzang.item.model.entity.MemberEntity;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 public interface MemberService {
@@ -13,4 +14,6 @@ public interface MemberService {
     boolean existsById(Long id);
     long count();
     void deleteById(Long id);
+
+    Map<?,?> login(MemberModel model);
 }

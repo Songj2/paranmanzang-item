@@ -13,11 +13,12 @@ import lombok.*;
 public class WishListEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     @ManyToOne
     @JoinColumn(name = "member_id")
     private MemberEntity member;
 
-    @Id
     @ManyToOne
     @JoinColumn(name = "hotel_id")
     private HotelEntity hotel;

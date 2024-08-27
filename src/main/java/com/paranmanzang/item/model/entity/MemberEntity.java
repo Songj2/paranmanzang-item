@@ -20,6 +20,6 @@ public class MemberEntity {
     private String password;
     private String tel;
 
-    @OneToMany(mappedBy = "wishlist")
+    @OneToMany(mappedBy = "member")
     private List<WishListEntity> wishLists;
 }

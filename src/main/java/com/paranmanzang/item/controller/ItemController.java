@@ -3,6 +3,7 @@ package com.paranmanzang.item.controller;
 import com.paranmanzang.item.model.domain.ItemModel;
 import com.paranmanzang.item.model.entity.ItemEntity;
 import com.paranmanzang.item.service.ItemService;
+import com.paranmanzang.item.service.impl.ItemServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -10,12 +11,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
-@Controller
+@RestController
 @RequiredArgsConstructor
 @RequestMapping("/items/")
 public class ItemController {
 
-    private final ItemService itemService;
+    private final ItemServiceImpl itemService;
 
     @GetMapping("list")
     public List<ItemModel> findAll() {
